@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="PAWSEWA Foundation — caring for India's community and street dogs through feeding, kindness and community action.">
+<title>PAWSEWA Foundation | Feed. Care. Protect.</title>
+<style>
+:root{
+  --green:#123f32; --green2:#1c5a47; --gold:#b48a35; --cream:#f8f6ef;
+  --text:#20312b; --muted:#66756f; --white:#fff; --shadow:0 18px 50px rgba(18,63,50,.12);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:var(--cream);line-height:1.6}
+a{color:inherit}
+.container{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);border-bottom:1px solid #e7e3d7}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:#e6f3ee;font-size:25px}
+.brand strong{font-size:22px;letter-spacing:2px;color:var(--green)}
+.brand small{display:block;letter-spacing:4px;color:var(--gold);font-size:10px}
+nav{display:flex;gap:24px}
+nav a{text-decoration:none;font-weight:700;font-size:14px}
+nav a:hover{color:var(--gold)}
+.hero{padding:82px 0 70px;background:radial-gradient(circle at 85% 20%,#e4f2eb 0,transparent 34%),linear-gradient(135deg,#fbfaf5,#edf5f0)}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:45px;align-items:center}
+.eyebrow{color:var(--gold);font-weight:800;letter-spacing:3px;font-size:13px}
+h1{font-size:clamp(42px,6vw,76px);line-height:1.02;margin:12px 0 22px;color:var(--green)}
+.hero p{font-size:18px;color:var(--muted);max-width:650px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-block;padding:13px 20px;border-radius:999px;text-decoration:none;font-weight:800}
+.btn-primary{background:var(--green);color:white}
+.btn-secondary{background:white;border:1px solid #d8ded9;color:var(--green)}
+.hero-card{background:white;border-radius:30px;overflow:hidden;box-shadow:var(--shadow)}
+.hero-card img{width:100%;height:390px;object-fit:cover;display:block}
+.hero-card .caption{padding:16px 20px;font-weight:800}
+section{padding:78px 0}
+.section-head{max-width:720px;margin-bottom:35px}
+.section-head h2{font-size:clamp(30px,4vw,48px);line-height:1.1;color:var(--green);margin:8px 0 12px}
+.section-head p{color:var(--muted)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.stat{background:white;padding:24px;border-radius:22px;box-shadow:0 8px 30px rgba(18,63,50,.07)}
+.stat b{font-size:32px;color:var(--green);display:block}
+.stat span{color:var(--muted);font-size:14px}
+.note{font-size:12px;color:#7c837f;margin-top:12px}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.photo{background:white;border-radius:22px;overflow:hidden;box-shadow:0 8px 30px rgba(18,63,50,.08)}
+.photo img{width:100%;height:280px;object-fit:cover;display:block}
+.photo div{padding:14px 16px;font-weight:800}
+.photo small{display:block;color:var(--muted);font-weight:500;margin-top:3px}
+.donate{background:var(--green);color:white}
+.donate-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+.donate h2{font-size:46px;line-height:1.05;margin:8px 0 15px}
+.donate p{color:#dcebe5}
+.donate-card{background:white;color:var(--text);border-radius:28px;padding:28px;text-align:center}
+.qr{width:min(330px,100%);border-radius:16px;display:block;margin:12px auto 18px;border:1px solid #eee}
+.upi{font-size:20px;font-weight:900;color:var(--green);word-break:break-word}
+.contact{background:white}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.contact-box{background:#f8faf8;border-radius:28px;padding:30px}
+.contact-box h3{font-size:28px;color:var(--green);margin-top:0}
+.contact-row{padding:12px 0;border-bottom:1px solid #e3e9e5}
+.contact-row:last-child{border-bottom:0}
+.contact-row a{text-decoration:none;color:var(--green);font-weight:800}
+footer{background:#0d2f26;color:#dcebe5;padding:30px 0}
+footer .foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer small{color:#a9bbb4}
+@media(max-width:800px){
+  nav{display:none}
+  .hero-grid,.donate-grid,.contact-grid{grid-template-columns:1fr}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .gallery{grid-template-columns:1fr 1fr}
+  .hero{padding-top:50px}
+}
+@media(max-width:520px){
+  .gallery{grid-template-columns:1fr}
+  .photo img{height:300px}
+  .stats{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home">
+      <span class="logo">🐾</span>
+      <span><strong>PAWSEWA</strong><small>FOUNDATION</small></span>
+    </a>
+    <nav>
+      <a href="#home">Home</a><a href="#impact">Impact</a><a href="#gallery">Dogs</a>
+      <a href="#donate">Donate</a><a href="#contact">Volunteer</a>
+    </nav>
+  </div>
+</header>
+
+<main id="home">
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">FOR INDIA'S COMMUNITY DOGS</div>
+      <h1>Feed a street dog. Share a little kindness.</h1>
+      <p>PAWSEWA Foundation works to support India's community dogs with food, water, compassion and people who care.</p>
+      <div class="buttons">
+        <a class="btn btn-primary" href="#donate">🐾 Donate to Feed</a>
+        <a class="btn btn-secondary" href="mailto:pawsewafoundation@gmail.com?subject=Volunteer%20with%20PAWSEWA%20Foundation">Become a Volunteer</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Feeding%20street%20dogs.jpg" alt="Person feeding street dogs in India">
+      <div class="caption">Small acts of kindness can make a dog's whole day. 🐕</div>
+    </div>
+  </div>
+</section>
+
+<section id="impact">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">OUR IMPACT</div>
+      <h2>Every bowl matters.</h2>
+      <p>Use these counters as an easy-to-edit impact dashboard. Replace the sample numbers with your verified figures as your work grows.</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>25+</b><span>Dogs fed — sample counter</span></div>
+      <div class="stat"><b>40+</b><span>Meals served — sample counter</span></div>
+      <div class="stat"><b>12</b><span>Water bowls — sample counter</span></div>
+      <div class="stat"><b>8</b><span>Community helpers — sample counter</span></div>
+    </div>
+    <div class="note">*Sample figures are intentionally marked. Update them with real PAWSEWA Foundation records.</div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">STREET DOGS OF INDIA</div>
+      <h2>Faces worth caring for.</h2>
+      <p>A photo gallery celebrating India's street and community dogs — their lives, their smiles and the people who help them.</p>
+    </div>
+    <div class="gallery">
+      <figure class="photo"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Street%20Dogs%20in%20INDIA.jpg" alt="Street dogs in India"><div>Street dogs in India<small>Community dogs sharing the streets.</small></div></figure>
+      <figure class="photo"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Indian%20Street%20dogs%20in%20Jaipur.jpg" alt="Indian street dogs in Jaipur"><div>Jaipur's street dogs<small>Every neighbourhood has its own stories.</small></div></figure>
+      <figure class="photo"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Streets%20dog%20in%20patna.jpg" alt="Street dog in Patna"><div>Street dog in Patna<small>Kindness belongs everywhere.</small></div></figure>
+      <figure class="photo"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/An%20Indian%20Street%20Dog.jpg" alt="Indian street dog"><div>Indian Pariah dog<small>Strong, intelligent and resilient.</small></div></figure>
+      <figure class="photo"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Indian%20Street%20Dog%203.jpg" alt="Indian street dog in West Bengal"><div>West Bengal community dog<small>A familiar face on the street.</small></div></figure>
+      <figure class="photo"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Stray%20dog%20indian.jpg" alt="Indian stray dog"><div>A street companion<small>They deserve food, water and care.</small></div></figure>
+      <figure class="photo"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/A%20street%20dog%20feeding%20her%20puppies.jpg" alt="Street dog feeding puppies in India"><div>A mother's care<small>Protecting mothers and puppies matters.</small></div></figure>
+      <figure class="photo"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Stray%20dog%20feeding%20her%20puppies%20in%20a%20rural%20courtyard.jpg" alt="Stray mother dog with puppies in India"><div>Safe together<small>Community care starts with compassion.</small></div></figure>
+      <figure class="photo"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Indian%20Street%20Dog.jpg" alt="Indian street dog"><div>Desi dog, big heart<small>Every dog deserves a chance.</small></div></figure>
+    </div>
+    <div class="note">Photo credits/licensing: images are sourced from Wikimedia Commons. Please keep attribution/licensing notices with the site when publishing.</div>
+  </div>
+</section>
+
+<section id="donate" class="donate">
+  <div class="container donate-grid">
+    <div>
+      <div class="eyebrow">SUPPORT OUR WORK</div>
+      <h2>Put food in a bowl.</h2>
+      <p>Your support can help with feeding activities for community dogs. Scan the QR or use the UPI ID below.</p>
+      <p><strong>UPI recipient:</strong> Rakesh Kumar</p>
+      <p><strong>UPI ID:</strong> 9709050336@superyes</p>
+    </div>
+    <div class="donate-card">
+      <h2 style="margin-top:0;color:#123f32">Scan to Donate</h2>
+      <img class="qr" src="upi-qr-crop.jpg" alt="UPI QR code for receiving donations">
+      <div class="upi">9709050336@superyes</div>
+      <p>Scan with your UPI app</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="container contact-grid">
+    <div class="section-head">
+      <div class="eyebrow">CONTACT</div>
+      <h2>Join the PAWSEWA family.</h2>
+      <p>Want to feed dogs, volunteer locally, help with awareness or support our work? Send us an email.</p>
+    </div>
+    <div class="contact-box">
+      <h3>PAWSEWA FOUNDATION</h3>
+      <div class="contact-row">📍 Ratu Road, Ranchi, Jharkhand, India</div>
+      <div class="contact-row">✉️ <strong>Email:</strong> <a href="mailto:pawsewafoundation@gmail.com">pawsewafoundation@gmail.com</a></div>
+      <div class="contact-row">📞 <strong>Phone:</strong> <a href="tel:+919709050336">+91 97090 50336</a></div>
+      <div class="contact-row">🐾 <strong>Volunteer:</strong> <a href="mailto:pawsewafoundation@gmail.com?subject=Volunteer%20with%20PAWSEWA%20Foundation">Email us to join</a></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container foot">
+    <div><strong>🐾 PAWSEWA FOUNDATION</strong><br><small>Feed. Care. Protect.</small></div>
+    <small>© 2026 PAWSEWA Foundation. Built with compassion.</small>
+  </div>
+</footer>
+
+</body>
+</html>
